@@ -44,7 +44,13 @@ var cardString = function (rank, suit) {
 //
 //     openTag("div");
 //     //=> <div>
-var openTag = function () {
+var openTag = function (tagName) {
+
+	var openBracket = "<";
+	var closeBracket = ">";
+
+	return openBracket + tagName + closeBracket;
+
 };
 
 
@@ -56,7 +62,12 @@ var openTag = function () {
 //
 //     closeTag("div");
 //     //=> </div>
-var closeTag = function () {
+var closeTag = function (closingTag) {
+
+	var openBracket = "</";
+	var closeBracket = ">";
+
+	return openBracket + closingTag + closeBracket;
 };
 
 
@@ -73,7 +84,9 @@ var closeTag = function () {
 //
 // Although I won't be testing for this, your code should re-use the functions that
 // you created in the previous section.
-var toTagString = function () {
+var toTagString = function (tagName, content) {
+
+	return openTag(tagName) + content + closeTag(tagName);
 };
 
 
