@@ -62,7 +62,17 @@ var randUpTo = function (rand) {
 
 // Write a function called `randBetween` that accepts two numbers representing a
 // range and returns a random whole number between those two numbers.
-var randBetween = function () {
+var randBetween = function (num1, num2) {
+
+	var rand1 = console.log(Math.floor(num1));
+	var rand2 = console.log(Math.floor(num2));
+
+	//Math.random() returns float value between 0 and 1. (num2 - num1) + num1
+	//means that randInBetween will never be greater than num2
+	var randInBetween = Math.random() * (num2 - num1) + num1;
+
+	return Math.round(randInBetween);
+
 };
 
 
