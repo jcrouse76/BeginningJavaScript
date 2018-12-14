@@ -91,7 +91,22 @@ var randBetween = function (num1, num2) {
 //
 //     isSuit("coins");
 //     //=> false
-var isSuit = function () {
+var isSuit = function (whatSuit) {
+
+	//Convert function argument string to uppercase
+	var isASuit = whatSuit.toUpperCase();
+	console.log(isASuit);
+
+	//Check function argument value
+	if (isASuit === "HEARTS" || isASuit === "DIAMONDS" ||
+		isASuit === "CLUBS" || isASuit === "SPADES") {
+		return true;		//match
+	} else {
+		return false;		//no-match
+	}
+
+	// return isASuit === "HEARTS" || "DIAMONDS" || "CLUBS" || "SPADES";
+
 };
 
 
