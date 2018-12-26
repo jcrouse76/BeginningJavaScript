@@ -122,8 +122,21 @@ var isSuit = function (whatSuit) {
 //
 //     isRank("one");
 //     //=> false
-var isRank = function () {
-};
+var isRank = function (rank) {
+
+	//if rank is equal to any of the following values, n is true, otherwise false
+
+	var n = rank.toLowerCase().includes("two") || rank.toLowerCase().includes("three")
+	|| rank.toLowerCase().includes("four") || rank.toLowerCase().includes("five") 
+	|| rank.toLowerCase().includes("six") || rank.toLowerCase().includes("seven")
+	|| rank.toLowerCase().includes("eight") || rank.toLowerCase().includes("nine")
+	|| rank.toLowerCase().includes("ten") || rank.toLowerCase().includes("jack")
+	|| rank.toLowerCase().includes("king") || rank.toLowerCase().includes("queen") 
+	|| rank.toLowerCase().includes("ace");
+
+
+	return n;
+ };
 
 
 // Using the previous two functions, write a function called isCard that accepts
